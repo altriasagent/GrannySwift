@@ -1,6 +1,14 @@
 # Contributing to GrannySwift
 
-GrannySwift is early in design. Start with [docs/DESIGN.md](docs/DESIGN.md), then use [docs/GRILL.md](docs/GRILL.md) for the questions that still need decisions. A provider choice does not imply that its integration is ready or that every feature should ship in the first implementation slice.
+GrannySwift is early in design. Read [docs/CURRENT.md](docs/CURRENT.md) for actual progress, [docs/DESIGN.md](docs/DESIGN.md) for agreed direction, and [docs/GRILL.md](docs/GRILL.md) for unanswered decisions. A provider choice does not imply that its integration is ready or that every feature should ship in the first implementation slice.
+
+## Project state and agent instruction hygiene
+
+The root [AGENTS.md](AGENTS.md) is a small routing layer, shared with Claude through the existing `CLAUDE.md` symlink. Keep universal repository guidance there. Put development procedures here, domain decisions in specs, and specialized workflows in an on-demand skill when they truly recur. Add nested `AGENTS.md` files or path-scoped `.claude/rules/` only for recurring requirements of an actual subdirectory. Avoid extra symlink families and duplicate instruction sources.
+
+Keep [docs/CURRENT.md](docs/CURRENT.md) as one short snapshot of actual project state. Update it at meaningful design, implementation, integration, or release transitions—not after each commit. Replace obsolete status; link to the owning PR or verification record rather than reproducing a changelog. [docs/DESIGN.md](docs/DESIGN.md) owns durable owner decisions; [docs/GRILL.md](docs/GRILL.md) owns unresolved questions. Claude Code auto memory and session handoffs are useful context, not authoritative project status.
+
+Use the [agent-configuration references](docs/SOURCES.md) to verify current behavior. Markdown instructions guide an agent; CI, permissions, hooks, and actual readback enforce important outcomes.
 
 ## Current development setup
 

@@ -43,3 +43,12 @@ Library selections and their intended jobs have one home: [DESIGN.md](DESIGN.md)
 - [Swift language guide](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/) and [API design guidelines](https://www.swift.org/documentation/api-design-guidelines/): established language facilities and idioms before custom machinery.
 
 The owner's private agent setup and previous rebuild informed the document discipline, but their private instructions, paths, live-state records, and personal evidence are not dependencies of this public project.
+
+## Agent configuration and context hygiene
+
+- [OpenAI: AGENTS.md project instructions](https://learn.chatgpt.com/docs/agent-configuration/agents-md): Codex discovers global and repository-scoped instructions; use specific overrides only for true local differences.
+- [Claude Code: best practices](https://code.claude.com/docs/en/best-practices): short always-loaded instructions, task-specific procedures in skills, and enforceable checks in CI/hooks where necessary.
+- [Claude Code: memory and AGENTS.md](https://code.claude.com/docs/en/memory): authored project instructions differ from auto memory. Newer Claude Code can read AGENTS.md directly; the existing CLAUDE.md symlink is a supported single-source choice and needs no duplicate import.
+- [Community AGENTS.md guide](https://gist.github.com/0xfauzi/7c8f65572930a21efa62623557d83f6e): additional examples, not a mandate to install all suggested rules, extra symlinks, or Python/AWS conventions. Verify version-sensitive guidance with first-party docs.
+
+For GrannySwift, [CURRENT.md](CURRENT.md) owns verified state; [DESIGN.md](DESIGN.md) owns durable decisions; [GRILL.md](GRILL.md) owns unanswered owner questions. Keep session-specific summaries and auto-generated maps out of always-loaded instructions.

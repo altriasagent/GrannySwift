@@ -3,7 +3,7 @@
 **Purpose:** resume `/grill-with-docs` from this repository, not from a remembered chat.  
 **State:** ready for refinement; the recommendations below have not been accepted.
 
-Read [DESIGN.md](DESIGN.md) for the locked choices and [SOURCES.md](SOURCES.md) for the upstream reading map. The owner explicitly requested the capture PR first, with grilling afterward. Do not block this capture on answers or infer acceptance from the instruction to open the PR.
+Read [CURRENT.md](CURRENT.md) for actual project state, [DESIGN.md](DESIGN.md) for locked choices, and [SOURCES.md](SOURCES.md) for the upstream reading map. The owner explicitly requested the capture PR first, with grilling afterward. Do not block this capture on answers or infer acceptance from the instruction to open the PR.
 
 ## How to run the session
 
@@ -44,7 +44,7 @@ During planning, read source and existing evidence. Run live checks or benchmark
 
 ## Suggested first-session prompt
 
-> Read AGENTS.md, docs/DESIGN.md, docs/GRILL.md, and the relevant upstream sources in docs/SOURCES.md. This PR captures owner decisions; it is not a final build specification. Use /grill-with-docs to resolve the remaining product and implementation boundaries. Preserve the selected providers, Swift-first/minimal-extension principle, public-repository requirements, and the final TSRP-plus-export / FluidAudio decisions. Inspect source before asking factual questions. Ask the independent open choices together, with recommended answers, and record only answers the owner actually gives. Leave naming and command design open until we work through concrete usage and output examples. Do not implement or deploy the whole stack from this brief.
+> Read AGENTS.md, docs/CURRENT.md, docs/DESIGN.md, docs/GRILL.md, and the relevant upstream sources in docs/SOURCES.md. This PR captures owner decisions; it is not a final build specification. Use /grill-with-docs to resolve the remaining product and implementation boundaries. Preserve the selected providers, Swift-first/minimal-extension principle, public-repository requirements, and the final TSRP-plus-export / FluidAudio decisions. Inspect source before asking factual questions. Ask the independent open choices together, with recommended answers, and record only answers the owner actually gives. Leave naming and command design open until we work through concrete usage and output examples. Do not implement or deploy the whole stack from this brief.
 
 ## Suggested workflow after alignment
 

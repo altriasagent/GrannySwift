@@ -2,10 +2,11 @@
 
 A Swift-first macOS capability layer for people and local coding agents. The direction is to reuse strong Apple integrations, extend their interfaces where necessary, and return useful results without rebuilding the providers underneath them.
 
-**Current state:** this repository contains a Swift package scaffold, a placeholder `granny` executable, a core target, tests, and a SwiftLint-enabled CI workflow. The application integrations described below are design decisions, not implemented or installed features.
+**Current state:** read [CURRENT.md](docs/CURRENT.md) for verified implementation status, active milestones, and next work. The selected integrations below are design decisions, not implemented or installed features.
 
 ## Start here
 
+- [Current state](docs/CURRENT.md): verified status, current milestone, and next step.
 - [Design capture](docs/DESIGN.md): the product intent, locked decisions, selected providers and libraries, boundaries, and superseded ideas from the initial architecture discussion.
 - [Next design session](docs/GRILL.md): the unresolved questions and a restart prompt for `/grill-with-docs`. Naming and the detailed CLI experience remain part of that work.
 - [Source map](docs/SOURCES.md): upstream implementations to inspect and the important limits on earlier findings.
