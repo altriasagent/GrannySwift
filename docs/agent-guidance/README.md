@@ -28,7 +28,8 @@ The register is a **map of sources and adopted practices**, not a copy of those 
 | [DESIGN.md](../DESIGN.md) | Durable owner-approved product and architecture decisions |
 | [GRILL.md](../GRILL.md) | Unanswered owner questions, separate from recommendations |
 | [SOURCES.md](../SOURCES.md) | Product/provider implementation sources, not agent instruction references |
-| Folder-level `README.md` files (when real components exist) | Code-grounded, conversational walkthroughs of what each meaningful part does and how it works |\n| Component specs, glossary, ADRs and specialized skills | Local contracts, terminology, durable tradeoffs and recurring procedures, created only when needed |
+| Folder-level `README.md` files (when real components exist) | Code-grounded, conversational walkthroughs of what each meaningful part does and how it works |
+| Component specs, glossary, ADRs and specialized skills | Local contracts, terminology, durable tradeoffs and recurring procedures, created only when needed |
 
 Keep each meaning in one authoritative place. Cross-reference it rather than copying it.
 
@@ -55,6 +56,21 @@ The root README introduces the whole project; [CURRENT.md](../CURRENT.md) report
 5. **At major agent-tooling changes or release review:** Revisit the *relevant* official references, verify instruction loading in the actual host, update interpretations here, and record the check date. An unrelated PR does not require a fresh web search of every source.
 
 A PR author or agent is responsible for performing the check; this document does not itself run background monitoring. If actual drift persists, propose a small deterministic CI check for broken local links or other enforceable facts rather than making the root instruction file longer.
+
+## Public pull requests: "What was asked"
+
+The `What was asked` section is a **public, editor-ready statement of the original request**, not a transcript of the owner's chat or a set of raw quotes. Write it for a contributor who has never seen the conversation. Start with the practical problem and intended user outcome; explain the owner-approved constraints, meaningful corrections, and what a reviewer should check. Include enough background to understand why the PR exists.
+
+- **Synthesize faithfully.** Rewrite informal or dictated wording into clear, natural product/engineering language, retaining the substance and priority of actual decisions. Distinguish owner-approved choices from assistant proposals, unresolved questions, and implementation facts.
+- **Improve the brief rather than simply sanitize it.** Supply concise context, the scope/acceptance criteria, and the key boundaries the request establishes. Do not introduce unapproved requirements, fabricated quotations, or a stronger commitment than the source supports.
+- **Keep it public-safe.** Do not expose conversation excerpts, personal names/details, internal conversations, private repository links, sensitive examples, or the owner's unedited phrasing merely to prove provenance. Refer to the approved design/spec and relevant public issue/PR instead.
+- **Keep it reviewable.** Explain what this PR was expected to change, what was explicitly deferred, and where evidence of completion should appear. The separate `Evidence` section reports what was actually verified.
+
+For example, replace a literal chat quotation such as “put the decisions into the repo first and grill later” with:
+
+> Establish a reviewable architecture kickoff in the public repository. Record the confirmed Swift-first design and selected integrations, prepare concise guidance for coding agents, and provide a structured entry point for subsequent `/grill-with-docs` refinement. Do not implement integrations or treat unapproved recommendations as final decisions in this PR.
+
+A verbatim quote is appropriate only if its **exact wording** is technically or legally material to the requested change and safe for publication. Otherwise prefer a sourced, professionally edited synthesis.
 
 ## Pruning rule
 
