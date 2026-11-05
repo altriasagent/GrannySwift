@@ -27,7 +27,7 @@ Verify the actual repository and default branch first. `gh repo view --json name
 
 ## Approval boundary
 
-Files (`.gitignore`, `CONTRIBUTING.md`, `CODEOWNERS`, templates, `SECURITY.md`, `dependabot.yml`) are ordinary commits. **Settings** changes (rulesets, collaborators, Dependabot toggles, code scanning, vulnerability reporting) alter who can do what on the repository: state the exact effect to the repository owner and get his yes before each one, unless his request already named that change.
+Files (`.gitignore`, `CONTRIBUTING.md`, `CODEOWNERS`, templates, `SECURITY.md`, `dependabot.yml`) are ordinary commits. **Settings** changes (rulesets, collaborators, Dependabot toggles, code scanning, vulnerability reporting) alter who can do what on the repository: explain the exact effect and obtain the repository owner's approval before each one, unless the request already explicitly authorizes that change.
 
 A `main` ruleset that requires pull requests ends direct pushes to `main`, including the agent's own. Say so when proposing it, and only create bypass permissions after an explicit separate decision by the repository owner.
 
