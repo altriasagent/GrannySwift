@@ -23,23 +23,35 @@ The register is a **map of sources and adopted practices**, not a copy of those 
 | --- | --- |
 | [AGENTS.md](../../AGENTS.md) (shared by CLAUDE.md) | Small cross-agent instructions, routing, core guardrails |
 | [README.md](../../README.md) | Public product description and navigation |
-| [CONTRIBUTING.md](../../CONTRIBUTING.md) and [CI](../../.github/workflows/ci.yml) | Real build/test commands and contributor/review procedures |
+| [Package.swift](../../Package.swift) and [CI](../../.github/workflows/ci.yml) | Actual dependencies, build and verification configuration |
 | [CURRENT.md](../CURRENT.md) | Actual verified state, meaningful blockers and next milestone |
 | [DESIGN.md](../DESIGN.md) | Durable owner-approved product and architecture decisions |
 | [GRILL.md](../GRILL.md) | Unanswered owner questions, separate from recommendations |
 | [SOURCES.md](../SOURCES.md) | Product/provider implementation sources, not agent instruction references |
-| Component specs, glossary, ADRs and specialized skills | Local contracts, terminology, durable tradeoffs and recurring procedures, created only when needed |
+| Folder-level `README.md` files (when real components exist) | Code-grounded, conversational walkthroughs of what each meaningful part does and how it works |\n| Component specs, glossary, ADRs and specialized skills | Local contracts, terminology, durable tradeoffs and recurring procedures, created only when needed |
 
 Keep each meaning in one authoritative place. Cross-reference it rather than copying it.
 
+## Component walkthrough READMEs
+
+These are the **primary human-readable explanations of the actual app**, close to the code they describe. Prefer a folder-level `README.md` for a coherent component or meaningful functional area. A directory name alone does not earn a README; don't create placeholder documents before there's behavior to explain.
+
+**The owner's explanation leads the voice.** The owner may dictate how they understand a concept, choose an example, rewrite a passage, or point to a favored walkthrough. Treat those words and edits as the style reference for that component. The coding agent contributes its knowledge of the real implementation to make that explanation accurate, clear, and current. Don't automatically replace the owner's framing with generic software-doc language. If the requested explanation conflicts with observed code, explain the mismatch and distinguish intended behavior from implemented behavior rather than silently changing either.
+
+A useful walkthrough ordinarily answers a human reader's questions in connected prose: what problem this part handles, what happens during a real example, the major handoffs and decisions, where permissions/state/failures matter, and which nearby source files support the explanation. The story and depth should fit the component; this is **not** a mandatory heading template, source-file inventory, or line-by-line tutorial. A few small diagrams or code links are helpful only where they clarify a real mechanism. Keep planned functionality visibly separate from implemented behavior.
+
+When a PR materially changes that component's behavior or boundaries, read the relevant README **against the changed code**, then update its walkthrough in the same PR. Preserve the owner's established language and style, correct stale factual explanations, and link to the owning spec or evidence where detail belongs. If no owner-approved example exists yet, draft a straightforward provisional explanation and let the owner refine the voice during review. Do not invent an approved house style.
+
+The root README introduces the whole project; [CURRENT.md](../CURRENT.md) reports verified state; [DESIGN.md](../DESIGN.md) captures agreed intent. A component README explains **how the actual component works**. Avoid duplicating these documents.
+
 ## Guidance drift review
 
-**Run at every PR handoff, including documentation-only changes.** Reconcile the PR's actual diff against *all affected guidance homes* above, including documents not edited by the PR. This is a scoped consistency check, not a complete repository audit or a reason to run tests solely for a documentation change.
+**Run at every PR handoff, including documentation-only changes.** Reconcile the PR's actual diff against *all affected guidance homes* above, especially folder-level walkthrough READMEs for changed components, including documents not edited by the PR. This is a scoped consistency check, not a complete repository audit or a reason to run tests solely for a documentation change.
 
-1. **Map impact:** Does the PR change project purpose, capabilities, dependencies, supported platforms, commands, outputs, permissions, build/CI, installation, agent behavior, or settled owner decisions? Identify the relevant canonical docs and referenced instructions.
+1. **Map impact:** Does the PR change project purpose, a component's behavior or flow, capabilities, dependencies, supported platforms, commands, outputs, permissions, build/CI, installation, agent behavior, or settled owner decisions? Identify the relevant canonical docs, local walkthrough READMEs, and referenced instructions.
 2. **Check reality:** Compare those docs with actual source/configuration, approved decisions, and linked upstream guidance where the change affects a version-dependent claim. Verify links, stale commands, contradictory statements, duplicated rules and claims that proposed work is already installed.
-3. **Reconcile in the same PR:** Correct or prune each affected document. Put actual status in CURRENT, approved decisions in DESIGN, unresolved questions in GRILL, provider evidence in SOURCES, contributor procedure in CONTRIBUTING, and source guidance here. Keep AGENTS.md concise. Do not silently reinterpret an unanswered owner choice.
-4. **Record a short handoff line:** For example, “Guidance reviewed: AGENTS.md, CURRENT.md and DESIGN.md; updated CURRENT.md, others unchanged. External guidance recheck: not applicable.” Or “Guidance reviewed: no updates needed.” Flag unresolved conflicts explicitly.
+3. **Reconcile in the same PR:** Correct or prune each affected document. Put actual status in CURRENT, approved decisions in DESIGN, unresolved questions in GRILL, provider evidence in SOURCES, and readable code-grounded explanations in each affected component README. Actual build settings belong in the manifest and CI; source guidance belongs here. Keep AGENTS.md concise. Do not silently reinterpret an unanswered owner choice.
+4. **Record a short handoff line:** For example, “Guidance reviewed: Messages README and CURRENT.md updated to match code; other related docs unchanged.” Or “Guidance reviewed: no related docs needed updates.” Flag unresolved conflicts explicitly.
 5. **At major agent-tooling changes or release review:** Revisit the *relevant* official references, verify instruction loading in the actual host, update interpretations here, and record the check date. An unrelated PR does not require a fresh web search of every source.
 
 A PR author or agent is responsible for performing the check; this document does not itself run background monitoring. If actual drift persists, propose a small deterministic CI check for broken local links or other enforceable facts rather than making the root instruction file longer.

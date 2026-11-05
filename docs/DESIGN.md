@@ -143,7 +143,7 @@ Useful output is part of the product design. Machine-readable stdout must stay s
 
 Carry forward the useful lessons from the earlier rebuild: one current source for each decision; component documentation distinct from install receipts; explanations close to non-obvious code; small reversible agent choices labeled as such; real application verification at meaningful milestones; and temporary handoffs that reference durable records rather than duplicating them. Do not import that project's language, orchestration framework, private instructions, or blanket SDK-first policy over GrannySwift's explicit choices.
 
-Keep a practical README, concise agent instructions, focused contributor guidance, sanitized fixtures, and source attribution. Use established Swift constructs and flag relevant standard resources while explaining decisions to a learner. Preserve license notices when adapting code. Public usability must not require private paths, accounts, skill installations, or repository access.
+Keep a practical root README, concise agent instructions, focused folder-level conceptual READMEs for meaningful implemented components, sanitized fixtures, and source attribution. The owner will shape the tone and explanatory framing of those component walkthroughs; coding agents should use source knowledge to maintain their accuracy in that voice, without imposing a rigid documentation template. Contributor policy is not a priority for the kickoff. Use established Swift constructs and flag relevant standard resources while explaining decisions to a learner. Preserve license notices when adapting code. Public usability must not require private paths, accounts, skill installations, or repository access.
 
 ## 7. Choices explicitly superseded
 

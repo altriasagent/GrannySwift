@@ -7,7 +7,8 @@ GrannySwift is a public, Swift-first macOS capability layer built around establi
 - **Status, continuation, handoff:** [docs/CURRENT.md](docs/CURRENT.md) records actual progress and the next milestone.
 - **Architecture and product design:** [docs/DESIGN.md](docs/DESIGN.md) records owner decisions; [docs/GRILL.md](docs/GRILL.md) records unanswered choices. Recommendations are not approvals.
 - **Provider implementation:** consult the approved component specification, [docs/SOURCES.md](docs/SOURCES.md), and actual upstream code before adding an alternative.
-- **Building, testing, review, releases:** [CONTRIBUTING.md](CONTRIBUTING.md) and [CI](.github/workflows/ci.yml) own the commands and procedures.
+- **Builds and tests:** [Package.swift](Package.swift) and [CI](.github/workflows/ci.yml) reflect the actual configuration; verify and use them rather than copying commands into instructions.
+- **Component walkthroughs:** when implementing or changing a meaningful feature, read and update its folder-level README as a code-grounded, conversational explanation. Follow the owner's approved wording and examples; see [documentation guidance](docs/agent-guidance/README.md#component-walkthrough-readmes).
 - **Repository settings:** follow the existing [repository-management skill](.agents/skills/repository-management/SKILL.md) and its approval boundary.
 
 ## Engineering defaults
@@ -20,4 +21,4 @@ Preserve useful behavior, not the old Python module layout. Use SwiftPM and idio
 
 Distinguish proposed, built, tested, reviewed, merged, installed, and working. Verify real effects rather than treating command launch as success. Update [CURRENT.md](docs/CURRENT.md) at meaningful milestones; keep history and detailed evidence in their owning PRs/specifications.
 
-**Guidance upkeep:** At every PR handoff, reconcile the actual change with all affected project and agent guidance using [docs/agent-guidance/README.md](docs/agent-guidance/README.md). Repair stale or conflicting guidance in the same PR, or record that the relevant documents were checked and unchanged. Keep this root file concise.
+**Guidance upkeep:** At every PR handoff, reconcile changes against affected project guidance—including relevant folder READMEs—using [docs/agent-guidance/README.md](docs/agent-guidance/README.md). Repair stale explanations in the same PR or record that the related docs were checked. Keep this root file concise.
