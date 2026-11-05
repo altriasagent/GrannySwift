@@ -2,7 +2,7 @@
 
 **Status:** Owner decisions captured; detailed design and implementation remain open.  
 **Capture:** November 4, 2026, local conversation date (America/New_York).  
-**Destination:** the public `altriasagent/GrannySwift` repository.
+**Destination:** the public `justanothernon-dev/GrannySwift` repository.
 
 This is the organized starting braindump for the rebuild, not a final specification or installation report. It records what was selected, why it matters, what changed during the discussion, and what a fresh coding agent should investigate next. The owner asked to put this record in a PR first and continue `/grill-with-docs` from the repository afterward.
 

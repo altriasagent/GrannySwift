@@ -9,7 +9,7 @@ This is the short, replace-in-place snapshot of what **actually exists**. [DESIG
 
 | Area | Verified state |
 | --- | --- |
-| Repository | Public `altriasagent/GrannySwift` repository; Swift Package Manager scaffold on `main`. |
+| Repository | Public `justanothernon-dev/GrannySwift` repository; Swift Package Manager scaffold on `main`. |
 | Executable | Placeholder `granny` command, `GrannyCore` target, and test target. No selected Apple provider is integrated in this scaffold. |
 | Installed dependencies | `Package.swift` declares Swift Argument Parser and the SwiftLint build plugin. The other selected packages are architectural decisions, not yet installed dependencies. |
 | Build configuration | Swift tools 6.0, macOS 14 declaration, and macOS 26 CI for `swift build`, `swift test`, and strict SwiftLint. These settings do not verify a support matrix for planned providers. |
@@ -18,7 +18,7 @@ This is the short, replace-in-place snapshot of what **actually exists**. [DESIG
 
 ## Active milestone
 
-The architecture kickoff documents live in [draft PR #1](https://github.com/altriasagent/GrannySwift/pull/1). Check that PR for live review or merge status; this page is not another PR tracker.
+The architecture kickoff documents live in [draft PR #1](https://github.com/justanothernon-dev/GrannySwift/pull/1). Check that PR for live review or merge status; this page is not another PR tracker.
 
 **Next action:** use the repository-grounded `/grill-with-docs` process from [GRILL.md](GRILL.md). Resolve open product, interface, permission, platform, and release-boundary decisions with the owner. Then write an approved implementation slice with observable acceptance criteria. Do not treat the whole initial braindump as blanket build authorization.
 

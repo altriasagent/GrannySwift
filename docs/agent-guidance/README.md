@@ -22,6 +22,7 @@ The register is a **map of sources and adopted practices**, not a copy of those 
 | Home | Owns |
 | --- | --- |
 | [AGENTS.md](../../AGENTS.md) (shared by CLAUDE.md) | Small cross-agent instructions, routing, core guardrails |
+| [Repository-management skill](../../.agents/skills/repository-management/SKILL.md) | Branch, PR, worktree and code hygiene, safe cleanup, and settings approval |
 | [README.md](../../README.md) | Public product description and navigation |
 | [Package.swift](../../Package.swift) and [CI](../../.github/workflows/ci.yml) | Actual dependencies, build and verification configuration |
 | [CURRENT.md](../CURRENT.md) | Actual verified state, meaningful blockers and next milestone |
