@@ -15,6 +15,8 @@ GrannySwift is a public, Swift-first macOS capability layer built around establi
 
 Favor the simplest architecture that reliably delivers the intended functionality. Use established libraries and native capabilities wherever they reduce custom code. Keep responsibilities clear, and introduce additional infrastructure when it provides a concrete benefit in functionality, performance, security, reliability, or maintainability. Explain meaningful tradeoffs rather than treating fewer components as an objective by itself.
 
+**Upstream fidelity:** When introducing, upgrading, or materially changing an SDK or library integration, identify the version in use and the latest suitable upstream release. Check relevant release notes, migration guidance, and API/source differences. Prefer the library's supported capabilities, conventions, and extension points over duplicating its functionality or building elaborate wrappers. Extend or diverge only for a demonstrated gap, keep that change narrow and maintainable, and verify it against the actual dependency version. Assess upgrades rather than applying them blindly.
+
 Preserve useful behavior, not the old Python module layout. Use SwiftPM and idiomatic Swift. Explain non-obvious mechanisms for a developer learning Swift, and use SourceKit-LSP diagnostics when available.
 
 **Public repo:** only synthetic/sanitized fixtures; never commit personal data, credentials, signing keys, or private configuration. Don't inherit ambient secrets into build plugins or subprocesses. A signing identity is not an automatic macOS privacy grant.
