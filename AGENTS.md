@@ -19,3 +19,5 @@ Preserve useful behavior, not the old Python module layout. Use SwiftPM and idio
 **Public repo:** only synthetic/sanitized fixtures; never commit personal data, credentials, signing keys, or private configuration. Don't inherit ambient secrets into build plugins or subprocesses. A signing identity is not an automatic macOS privacy grant.
 
 Distinguish proposed, built, tested, reviewed, merged, installed, and working. Verify real effects rather than treating command launch as success. Update [CURRENT.md](docs/CURRENT.md) at meaningful milestones; keep history and detailed evidence in their owning PRs/specifications.
+
+**Instruction drift:** At every PR handoff, compare this file and its links with the actual changes to code, dependencies, CI, conventions, and project docs. Correct or prune stale instructions in the same PR; keep domain detail in its owning document rather than expanding this file. If no update is necessary, record that it was checked. See [CONTRIBUTING.md](CONTRIBUTING.md#agent-instruction-drift-check).
