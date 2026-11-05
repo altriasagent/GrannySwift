@@ -15,7 +15,9 @@ This kickoff is a design capture, not authorization to implement every listed fe
 
 Preserve useful behavior rather than porting the old Python module layout. Prefer native library capabilities and small CLI extensions over duplicate readers, speculative abstractions, or another general-purpose framework. Check what a selected dependency already supplies before writing an alternative. Keep project-owned routing and adaptation Swift-first; mature upstream tools may retain their own languages.
 
-Use explicit dependencies and small, meaningful boundaries. Add a service, database, cache, retry loop, compatibility layer, or dependency-injection framework only for a named current requirement whose simpler solution is inadequate. A selected library does not require a contrived use case, and a source example is not automatically production-ready code.
+Favor the simplest architecture that reliably delivers the intended functionality. Use established libraries and native capabilities wherever they reduce custom code. Keep responsibilities clear, and introduce additional infrastructure when it provides a concrete benefit in functionality, performance, security, reliability, or maintainability. Explain meaningful tradeoffs rather than treating fewer components as an objective by itself.
+
+A selected library does not require a contrived use case, and a source example is not automatically production-ready code.
 
 Keep target resolution, completeness, native action results, and verification distinct. A launched command is not a completed operation; a recorded outgoing message is not recipient delivery. Preserve uncertain writes without blindly replaying them. Command schemas, final names, and compatibility details are still subject to design.
 
