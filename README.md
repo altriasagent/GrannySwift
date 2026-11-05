@@ -11,7 +11,8 @@ A Swift-first macOS capability layer for people and local coding agents. The dir
 - [Next design session](docs/GRILL.md): the unresolved questions and a restart prompt for `/grill-with-docs`. Naming and the detailed CLI experience remain part of that work.
 - [Source map](docs/SOURCES.md): upstream implementations to inspect and the important limits on earlier findings.
 - [Contributing](CONTRIBUTING.md): development, verification, documentation, and public-repository practices.
-- [Agent instructions](AGENTS.md): the repository-specific working rules. `CLAUDE.md` points to the same file.
+- [Agent instructions](AGENTS.md): the concise, shared Codex/Claude entry point.
+- [Agent guidance sources and upkeep](docs/agent-guidance/README.md): authoritative references and the cross-document PR consistency procedure.
 
 ## Direction
 

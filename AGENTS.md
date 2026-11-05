@@ -20,4 +20,4 @@ Preserve useful behavior, not the old Python module layout. Use SwiftPM and idio
 
 Distinguish proposed, built, tested, reviewed, merged, installed, and working. Verify real effects rather than treating command launch as success. Update [CURRENT.md](docs/CURRENT.md) at meaningful milestones; keep history and detailed evidence in their owning PRs/specifications.
 
-**Instruction drift:** At every PR handoff, compare this file and its links with the actual changes to code, dependencies, CI, conventions, and project docs. Correct or prune stale instructions in the same PR; keep domain detail in its owning document rather than expanding this file. If no update is necessary, record that it was checked. See [CONTRIBUTING.md](CONTRIBUTING.md#agent-instruction-drift-check).
+**Guidance upkeep:** At every PR handoff, reconcile the actual change with all affected project and agent guidance using [docs/agent-guidance/README.md](docs/agent-guidance/README.md). Repair stale or conflicting guidance in the same PR, or record that the relevant documents were checked and unchanged. Keep this root file concise.

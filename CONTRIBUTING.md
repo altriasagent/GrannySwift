@@ -2,24 +2,11 @@
 
 GrannySwift is early in design. Read [docs/CURRENT.md](docs/CURRENT.md) for actual progress, [docs/DESIGN.md](docs/DESIGN.md) for agreed direction, and [docs/GRILL.md](docs/GRILL.md) for unanswered decisions. A provider choice does not imply that its integration is ready or that every feature should ship in the first implementation slice.
 
-## Project state and agent instruction hygiene
+## Project guidance and maintenance
 
-The root [AGENTS.md](AGENTS.md) is a small routing layer, shared with Claude through the existing `CLAUDE.md` symlink. Keep universal repository guidance there. Put development procedures here, domain decisions in specs, and specialized workflows in an on-demand skill when they truly recur. Add nested `AGENTS.md` files or path-scoped `.claude/rules/` only for recurring requirements of an actual subdirectory. Avoid extra symlink families and duplicate instruction sources.
+The [agent-guidance register](docs/agent-guidance/README.md) is the sole home for coding-agent instruction sources, their adopted conventions, ownership of the key guidance documents, and the **scoped consistency review required at every PR handoff**. Review the current diff against affected guidance, update stale material in the same PR, and report what was checked; a documentation-only change does not require running the application test suite.
 
-Keep [docs/CURRENT.md](docs/CURRENT.md) as one short snapshot of actual project state. Update it at meaningful design, implementation, integration, or release transitions—not after each commit. Replace obsolete status; link to the owning PR or verification record rather than reproducing a changelog. [docs/DESIGN.md](docs/DESIGN.md) owns durable owner decisions; [docs/GRILL.md](docs/GRILL.md) owns unresolved questions. Claude Code auto memory and session handoffs are useful context, not authoritative project status.
-
-Use the [agent-configuration references](docs/SOURCES.md) to verify current behavior. Markdown instructions guide an agent; CI, permissions, hooks, and actual readback enforce important outcomes.
-
-## Agent instruction drift check
-
-At every PR handoff, perform a **scoped comparison** between the changed files and [AGENTS.md](AGENTS.md), its linked sources, the actual build configuration, and the repository's established conventions. This is a documentation consistency check, not a general audit of the whole codebase or a reason to run tests for prose-only work.
-
-1. Identify whether the change affects commands/tooling, dependencies, package requirements, workflows, permissions/security, development practices, repo purpose, or the path/authority of any linked document.
-2. If affected, update or remove the stale AGENTS.md statement or pointer **in the same PR**. Keep stable, cross-task directions in AGENTS.md; put detailed procedures in CONTRIBUTING, current status in CURRENT, decisions in DESIGN, and component requirements in their respective specs. Remove superseded material rather than appending exceptions.
-3. Check that CLAUDE.md still points to AGENTS.md, and that referenced local files and headings exist. Do not introduce another copy of shared instructions.
-4. Include one short line in the PR handoff: `AGENTS.md: updated (reason)` or `AGENTS.md: checked, no update needed`. If an inconsistency depends on an unresolved owner decision, name it explicitly rather than guessing.
-
-A subsequent meaningful repo change repeats the check. Do not rewrite AGENTS.md merely because a session started, a file moved with its references already updated, or a minor change did not affect its instructions.
+Keep the verified current state in [CURRENT.md](docs/CURRENT.md), settled product choices in [DESIGN.md](docs/DESIGN.md), and open owner questions in [GRILL.md](docs/GRILL.md). Session memory and handoffs are not substitutes for these maintained records.
 
 ## Current development setup
 

@@ -31,4 +31,4 @@ The architecture kickoff documents live in [draft PR #1](https://github.com/altr
 
 ## Maintenance
 
-Update this file **only when the current picture materially changes**: design alignment, a completed verified slice, a new significant blocker, a merge, installation, or observed working behavior. Replace stale status rather than appending chronology. Keep the current next action obvious and link to the PR, spec, or evidence that establishes the status.
+Update this file **only when the current picture materially changes**: design alignment, a completed verified slice, a new significant blocker, a merge, installation, or observed working behavior. Replace stale status rather than appending chronology. Keep the current next action obvious and link to the PR, spec, or evidence that establishes the status. Apply the [guidance consistency review](agent-guidance/README.md) when a PR affects this state or other project instructions.

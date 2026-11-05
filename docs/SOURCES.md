@@ -35,20 +35,9 @@ This PR changes documentation only. It does not establish a new local build, liv
 
 Library selections and their intended jobs have one home: [DESIGN.md](DESIGN.md). Popularity counts and earlier performance claims are deliberately not frozen into requirements.
 
-## Design and agent-writing references
+## Language and coding-agent references
 
-- [Matt Pocock: grill-with-docs](https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md), [grilling](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md), and [domain-modeling](https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md): grounded question rounds, explicit owner choices, sparse durable records.
-- [Writing for agents](https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL.md): concise instructions, meaningful context pointers, and one source per rule.
-- [Handoff](https://github.com/mattpocock/skills/blob/main/skills/productivity/handoff/SKILL.md): reference durable artifacts rather than duplicate them. The repository design record is not a permanent session transcript.
-- [Swift language guide](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/) and [API design guidelines](https://www.swift.org/documentation/api-design-guidelines/): established language facilities and idioms before custom machinery.
+- [The Swift language guide](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/) and [Swift API design guidelines](https://www.swift.org/documentation/api-design-guidelines/): standard facilities and idioms before custom machinery.
+- [Agent guidance reference register](agent-guidance/README.md): the maintained standalone home for official Codex/Claude instructions, Matt Pocock skills, community examples, adopted patterns, and all-guidance PR drift checks.
 
-The owner's private agent setup and previous rebuild informed the document discipline, but their private instructions, paths, live-state records, and personal evidence are not dependencies of this public project.
-
-## Agent configuration and context hygiene
-
-- [OpenAI: AGENTS.md project instructions](https://learn.chatgpt.com/docs/agent-configuration/agents-md): Codex discovers global and repository-scoped instructions; use specific overrides only for true local differences.
-- [Claude Code: best practices](https://code.claude.com/docs/en/best-practices): short always-loaded instructions, task-specific procedures in skills, and enforceable checks in CI/hooks where necessary.
-- [Claude Code: memory and AGENTS.md](https://code.claude.com/docs/en/memory): authored project instructions differ from auto memory. Newer Claude Code can read AGENTS.md directly; the existing CLAUDE.md symlink is a supported single-source choice and needs no duplicate import.
-- [Community AGENTS.md guide](https://gist.github.com/0xfauzi/7c8f65572930a21efa62623557d83f6e): additional examples, not a mandate to install all suggested rules, extra symlinks, or Python/AWS conventions. Verify version-sensitive guidance with first-party docs.
-
-For GrannySwift, [CURRENT.md](CURRENT.md) owns verified state; [DESIGN.md](DESIGN.md) owns durable decisions; [GRILL.md](GRILL.md) owns unanswered owner questions. Keep session-specific summaries and auto-generated maps out of always-loaded instructions.
+The owner's private agent setup and earlier rebuild informed these practices, but this public repository has no dependency on private instructions, accounts, or personal evidence.
